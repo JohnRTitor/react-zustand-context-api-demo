@@ -7,6 +7,7 @@ interface CounterStore {
   decrement: () => void;
 }
 
+// NOTE: all of these are outside React life cycle
 // create a custom hook called useCounterStore,
 // in which you set the initial value of count
 // you can also define functions like
