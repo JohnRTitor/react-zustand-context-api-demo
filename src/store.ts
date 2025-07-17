@@ -22,3 +22,5 @@ export const useCounterStore = create<CounterStore>((set) => ({
   },
   decrement: () => set((state) => ({ count: state.count - 1 })),
 }));
+// BEST PRACTICE: we should have unrelated functions and states in different stores
+// as it makes the code more modular

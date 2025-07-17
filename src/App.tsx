@@ -15,6 +15,10 @@ const setCount = (value: number) => {
 function App() {
   // Accessing inside a React component
   const count = useCounterStore((state) => state.count);
+  // we can also get the whole state and destructure the count like this
+  // but it is less performant, as the component know listens to the entire state
+  // and rerender when the entire state changes, which is a problem. This is NOT a best practice
+  // const { count } = useCounterStore((state) => state);
   const incrementAsync = useCounterStore((state) => state.incrementAsync);
   const decrement = useCounterStore((state) => state.decrement);
 
