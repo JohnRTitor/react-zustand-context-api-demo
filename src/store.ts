@@ -2,10 +2,16 @@ import { create } from "zustand";
 
 interface CounterStore {
   count: number;
-  setCount: (value: number) => void;
+  increment: () => void;
+  decrement: () => void;
 }
 
+// create a custom hook called useCounterStore,
+// in which you set the initial value of count
+// you can also define functions like
+// increment, decrement
 export const useCounterStore = create<CounterStore>((set) => ({
   count: 0,
-  setCount: (value) => set({ count: value }),
+  increment: () => set((state) => ({ count: state.count + 1 })),
+  decrement: () => set((state) => ({ count: state.count - 1 })),
 }));
