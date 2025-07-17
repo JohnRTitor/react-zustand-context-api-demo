@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useCounterStore } from "../store/countStore";
+import { useCounterStore } from "./store/countStore";
 
 // Accessing outside a react component
 const logCount = () => {
